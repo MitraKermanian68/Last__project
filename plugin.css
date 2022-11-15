@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Vazir";
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primarycolor:  rgba(0, 33, 245, 0.702);
+    --secondaryColor: rgba(245, 0, 0, 0.702);
+    --lightColor: #ffcbcb;
+    --darkcolor: #2b2b2b;
+    
+}
+
+@font-face {
+    font-family: "Vazir";
+    src: url(../Last__project/fonts/IRANSansWeb_Medium.ttf);
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    direction: rtl;
+    overflow-x: hidden;
+}
+
+.main__btn {
+    color: var(--darkcolor);
+    background-color: white;
+    border-radius: 5rem;
+    border: none;
+    width: fit-content;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.3);
+   
+}
+
+.main__btn:hover {
+    color: white;
+    background: transparent;
+    padding: 0.5rem 1.5rem;
+}
+
+.main__btn::before {
+    padding: 0.5rem 1.5rem;
+    position: absolute;
+    content: "";
+    background-color: var(--secondaryColor);
+    transform: scaleX(0);
+    transition: all ease 500ms;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transform-origin: right;
+    border-radius: 1rem;
+   
+}
+
+.main__btn:hover::before {
+    transform: scaleX(1);
+    padding: 0.5rem 1.5rem;
+}
+
+.main__btn__ouline {
+    margin: 10px;
+    background-color: transparent;
+    color: var(--lightColor);
+    border-radius: 1.5rem;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.452);
+    transition: all ease 200ms;
+    
+}
+
+.main__btn__ouline:hover {
+    color: white;
+    border: 1px solid var(--lightColor);
+}
+
+.middle__content-btn button:last-child {
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.middle__content-btn {
+    padding: 1rem;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+
+.start {
+    color: var(--darkcolor);
+    background-color: white;
+    border-radius: 5rem;
+    border: none;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.start:hover {
+    color: white;
+    background: transparent;
+}
+
+.start::before {
+    position: absolute;
+    content: "";
+    background-color: var(--secondaryColor);
+    transform: scaleX(0);
+    transition: all ease 500ms;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transform-origin: right;
+    border-radius: 1rem;
+}
+
+.start:hover::before {
+    transform: scaleX(1);
+}
+
+.service__title {
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+    width: fit-content;
+}
+
+.service__title::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: var(--primarycolor);
+    margin: 2.5rem auto 0 auto;
+    border-radius: 5rem;
+}
